@@ -1,0 +1,45 @@
+@import "./styles/_variables.sass"
+    
+.goods-container
+    display: grid
+    grid-template-columns: 1fr 400px
+    
+    flex-direction: column
+    width: 1024px
+    
+    margin: 0 auto
+    background-color: white
+    border-radius: 12px
+    margin-bottom: 24px
+    &__title-container
+        margin-top: 8px
+    &__info-about-item
+        margin: 24px
+    &__img-container
+        display: flex
+        align-items: left
+        justify-content: center
+        flex-direction: column
+        
+        margin: 24px
+        
+    & img
+        width: 80%
+        height: 80%
+        object-fit: contain
+        border-radius: 80px
+        transition: transform 0.5s
+        &:hover
+            transform: scale(1.15)
+
+.cost
+    margin-top: 8px
+    width: 200px
+        
+.imggg
+    @include flex-center()
+    width: 340px
+    height: 340px
+    border-radius: 200px
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.8)
+    overflow: hidden

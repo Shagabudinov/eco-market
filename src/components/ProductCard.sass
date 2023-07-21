@@ -1,0 +1,160 @@
+@import "./styles/_variables"
+$width-cart: 239.5px
+
+a
+    all: unset
+    cursor: pointer
+    
+.product-card
+    height: 303px
+    width: $width-cart
+    box-sizing: border-box
+    background-color: white
+    border-radius: 24px
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)
+    overflow: hidden
+    &__image
+        width: 80%
+        height: 80%
+        object-fit: contain
+        border-radius: 12px 12px 0 0
+        transition: transform 0.5s
+        
+        &:hover
+            transform: scale(1.2)
+    &__hr
+        margin-bottom: 8px
+        opacity: 0.1
+        
+    &__info
+        position: relative
+        margin: 0px 20px 0px 20px
+        
+        text-align: left
+        
+
+        &__title
+            display: inline
+            padding-left: 0px
+            text-decoration: none
+            font-size: 20px
+            font-weight: 500
+            letter-spacing: 1.26
+            
+            &:active
+                text-decoration: none
+            &:hover
+                text-decoration: none
+        
+        &__meta 
+            display: flex
+            align-items: center
+            justify-content: left
+            margin: 6px 0px 6px 0px
+            &__new
+                margin-left: 24px
+                color: $color-green
+                font-weight: 500
+                margin-bottom: 2px
+                
+        &__many-to-cart
+            display: flex
+            align-content: center
+            justify-content: space-between
+        &__to-cart
+            margin: 0px 0px 8px 0px
+            height: 35px
+            border-radius: 12px
+            background-color: $color-green
+            color: white
+            text-align: center
+            font-size: 16px
+            font-weight: 600
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4)
+            &__about-item
+                display: block
+                text-align: center
+                font-size: 12px
+                font-weight: 400
+            &__button
+                width: 100%
+                height: 100%
+                padding: 8px 0px 8px 0px
+                border: none
+                background-color: $color-green
+                color: white
+                text-align: center
+                font-size: 16px
+                font-weight: 600
+                cursor: pointer
+                border-radius: 12px
+                &__counter
+                    width: 30px
+                    padding: 0px
+                    
+
+            
+            
+
+.photo
+    @include flex-center()
+    position: relative
+    width: $width-cart
+    height: 161px
+    
+
+.pic
+    @include flex-center()
+    width: 35px
+    height: 0 auto
+
+.item-cost
+    padding: 8px 20px 8px 20px
+    background-color: $color-grey
+    border-radius: 12px
+    font-size: 16px
+    font-weight: 500
+    text-align: center
+    position: relative
+    display: inline-block
+    align-self: center
+    &::before,
+    &::after
+        content: ""
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        width: 16px
+        height: 16px
+        background-color: #fff
+        border-radius: 50%
+    &::after
+        right: -8px
+    &::before
+        left: -8px
+        
+    
+.item-moved
+    position: absolute
+    background-color: $color-grey
+    border-radius: 12px
+    padding: 8px 8px 8px 8px
+    top: 75%
+    left: 67%
+    font-size: 14px
+    opacity: 0.85
+    z-index: 3
+
+
+
+
+.hovered-image
+    transform: scale(1.2)
+    
+    
+
+
+
+
+
+    

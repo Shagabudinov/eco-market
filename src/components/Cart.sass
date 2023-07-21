@@ -1,0 +1,126 @@
+@import "./styles/_variables"
+    
+.cart-contanter
+    display: grid
+    grid-template-columns: 1fr 1fr
+    width: 1024px
+    margin: 0 auto
+    background-color: white
+    margin-bottom: 22px
+    border-radius: 12px
+
+    &::before,
+    &::after
+        content: ""
+        grid-column: 1 / -1
+        height: 100%
+        border-left: 10px solid #000
+        
+    &__column-1
+        grid-column: 1
+        padding: 24px
+        &__form
+            display: flex
+            flex-direction: column
+            & label
+                margin-top: 4px
+                font-size: 20px
+                font-weight: 500
+            &__input-item 
+                padding: 8px
+                margin-top: 12px
+                width: 90%
+                border-radius: 12px
+            & input[type="checkbox"]
+                appearance: none
+                -webkit-appearance: none
+                -moz-appearance: none
+                width: 20px
+                height: 20px
+                border-radius: 50%
+                border: 2px solid #999
+                outline: none
+                cursor: pointer
+                &:checked + .checkmark
+                    visibility: visible
+                    
+                    
+                    
+            & div
+                display: flex
+            & p
+                font-size: 16px
+    &__column-2
+        grid-column: 2
+        padding: 24px
+        &__title-block
+            display: flex
+            justify-content: space-between
+            margin-right: 3%
+
+.product-cart
+    display: grid
+    grid-template-columns: 30% 1fr
+    height: 160px
+    width: 95%
+    margin-top: 16px
+    box-sizing: border-box
+    background-color: white
+    border-radius: 24px
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)
+    overflow: hidden
+    &:last-child
+        margin-bottom: 16px
+    &__left
+        display: flex
+        width: 100%
+        &__img-container
+            @include flex-center()
+            width: 100%
+            height: 160px
+            overflow: hidden
+            &__image
+                width: 90%
+                height: 90%
+                object-fit: contain
+                transition: transform 0.5s
+                &:hover
+                    transform: scale(1.2)
+
+    &__right
+        padding: 12px
+
+
+.checkmark 
+    display: inline-block
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background-color: black
+    visibility: hidden
+    margin-right: 8px
+    order: 999
+
+.cart-button
+    
+    margin-left: 0px
+    padding: 8px
+    border-radius: 12px
+    
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.4)
+    
+    &__text
+        font-size: 14px
+        font-weight: 500
+
+.red-button
+    background-color: red
+    &:hover
+        background-color: #ff6565
+
+
+
+
+
+
+        

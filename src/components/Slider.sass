@@ -1,0 +1,51 @@
+@import "./styles/_variables"
+
+.slider-container
+    position: relative
+    width: 1004px
+    height: 320px
+    margin: 0 auto
+    margin-bottom: 22px
+    border: 10px solid white /* Толщина и цвет рамки */
+    box-sizing: content-box /* Учтите рамку внутри размеров слайда */
+    background-color: white
+    border-radius: 12px
+    
+
+
+
+
+.slick-slide img 
+    width: 1004px
+    height: 320px
+    object-fit: cover
+    
+
+.custom-pages 
+    width: 30px
+    height: 5px
+    border: 2px $color-grey solid
+    border-radius: 12px  
+    margin-top: -15px
+    
+
+.slick-dots
+    @include flex-center()
+    align-items: center
+
+
+    
+
+.active 
+  background-color: $color-green
+
+
+
+
+
+
+
+
+
+
+
